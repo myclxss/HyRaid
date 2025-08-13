@@ -15,10 +15,10 @@ package dev.anhuar.hyRaid.enums;
 
 public enum RaidEnum {
 
-    START,
+    WAITING,
     STARTING,
+    IN_PROGRESS,
+    FINISHED,
     STOP,
-    STOPPING,
-    TRANSITION,
 
 }
