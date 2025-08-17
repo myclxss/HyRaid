@@ -13,6 +13,29 @@ package dev.anhuar.hyRaid.handler;
  * ========================================================
  */
 
+import dev.anhuar.hyRaid.HyRaid;
+import dev.anhuar.hyRaid.manager.EventManager;
+import dev.anhuar.hyRaid.manager.RaidManager;
+import dev.anhuar.hyRaid.manager.RewardManager;
+import lombok.Getter;
+
+@Getter
 public class ManagerHandler {
 
+    private final HyRaid plugin;
+
+    private EventManager eventManager;
+    private RaidManager raidManager;
+    private RewardManager rewardManager;
+
+    public ManagerHandler(HyRaid plugin) {
+        this.plugin = plugin;
+        registerManager();
+    }
+
+    public void registerManager() {
+        this.eventManager = new EventManager();
+        this.raidManager = new RaidManager();
+        this.rewardManager = new RewardManager();
+    }
 }
